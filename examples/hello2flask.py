@@ -3,11 +3,9 @@ from flask import Flask, request, flash, url_for, redirect, \
      render_template, abort
 from flask.ext.sqlalchemy import SQLAlchemy
 
-
 app = Flask(__name__)
-app.config.from_pyfile('hello.cfg')
+app.config.from_pyfile('hello2flask.cfg')
 db = SQLAlchemy(app)
-
 
 class Todo(db.Model):
     __tablename__ = 'todos'
@@ -57,5 +55,5 @@ def update_done():
 
 
 if __name__ == '__main__':
-    db.create_all()
+    db.reflect()
     app.run()

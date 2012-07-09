@@ -12,7 +12,6 @@
       <tr class=title>
         <td>{{ todo.id }}
         <td>{{ todo.title }}
-        <td>{{ todo.pub_date.strftime('%Y-%m-%d %H:%M') }}
         <td><input type=checkbox name=done.{{ todo.id }}{{ " checked" if todo.done }}>
       <tr class=text>
         <td colspan=3>{{ todo.text }}</td>
